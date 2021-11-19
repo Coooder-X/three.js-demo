@@ -6,6 +6,7 @@
 
 <script>
 import * as THREE from '../js/three.module.js';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 import { GLTFLoader } from '../js/GLTFLoader.js';   
 
@@ -90,7 +91,7 @@ export default {
       this.loader = new GLTFLoader()//.setPath( './models/gltf/' );
       // console.log(this.loader)
       // loader.load( './models/gltf/collision-world.glb', function( gltf ) {//issum_the_town_on_capital_isle
-      this.loader.load( '../../static/gltf/issum_the_town_on_capital_isle/scene.gltf', function( gltf ) {
+      this.loader.load( '/static/gltf/issum_the_town_on_capital_isle/scene.gltf', function( gltf ) {
           that.map = gltf.scene;
 
           gltf.scene.scale.setScalar( 1 );
@@ -119,7 +120,7 @@ export default {
 
       } );
 
-      this.loader2 = new GLTFLoader().setPath( '../../static/gltf/low_poly_plane/' );
+      this.loader2 = new GLTFLoader().setPath( '/static/gltf/low_poly_plane/' );
       this.loader2.load('scene.gltf', function(gltf) {
           that.plane = gltf.scene;
           gltf.cameras.push(that.camera)
